@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import TopCards from "@/components/TopCards";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main className="bg-gray-100 min-h-screen">
         <Header />
+        <TopCards />
       </main>
     </>
   );

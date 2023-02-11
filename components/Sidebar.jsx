@@ -11,28 +11,28 @@ const Sidebar = ({ children }) => {
       <div className="fixed w-20 p-4 bg-white border-r-[1px] flex flex-col justify-between">
         <div className="flex flex-col items-center">
           <Link href="/">
-            <div className="bg-purple-800 text-white p-3 rounded-lg inline-block">
+            <div className="bg-purple-800 text-white p-3 rounded-lg inline-block transition-all duration-500 shadow-sm hover:shadow-lg">
               <RxSketchLogo size={20} />
             </div>
           </Link>
           <span className="border-b-[1px] border-gray-200 w-full p-2"></span>
           <Link href="/customers">
-            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block">
+            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block transition-all duration-500 shadow-sm hover:shadow-lg">
               <RxDashboard size={20} />
             </div>
           </Link>
           <Link href="/customers">
-            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block">
+            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block transition-all duration-500 shadow-sm hover:shadow-lg">
               <RxPerson size={20} />
             </div>
           </Link>
           <Link href="/orders">
-            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block">
+            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block transition-all duration-500 shadow-sm hover:shadow-lg">
               <HiOutlineShoppingBag size={20} />
             </div>
           </Link>
           <Link href="/">
-            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block">
+            <div className="bg-gray-100 hover:bg-gray-200 my-3 cursor-pointer p-3 rounded-lg inline-block transition-all duration-500 shadow-sm hover:shadow-lg">
               <FiSettings size={20} />
             </div>
           </Link>
