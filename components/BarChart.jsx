@@ -1,7 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+  BarElement,
+  Title,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+  BarElement,
+  Title
+);
 
 const BarChart = () => {
-  return <div>BarChart</div>;
+  const [chartData, setChartData] = useState({
+    datasets: [],
+  });
+  const [chartOptions, setChartOptions] = useState({});
+  useEffect(() => {
+    setChartData({
+      labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+      datasets: [
+        {
+          label: "Sales $",
+          data: [18127, 22201, 19490, 17938, 24182, 17842, 22475],
+          borderColor: "rgb(53, 162, 235)",
+          backgroundColor: "rgb(100, 120, 200, 0.4)",
+        },
+      ],
+    });
+    setChartOptions({
+      plugins: {
+        legend: {
+          position: "top",
+        },
+        title: {
+          display: true,
+          text: "Daily Revenue",
+        },
+      },
+      maintainAspectRatio: false,
+      responsive: true,
+    });
+  }, []);
+  return (
+    <div className="w-full md:col-span-2 relative lg:col-[70vh] h-[50vh] m-auto p-4 border-rounded-lg bg-white">
+      <Bar data={chartData} options={chartOptions} />
+    </div>
+  );
 };
 
 export default BarChart;
